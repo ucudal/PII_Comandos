@@ -16,3 +16,5 @@ En algunos casos, los comandos para Windows varían de Linux/MacOS. En estos cas
 -   [Crear un repositorio (local)](./Repositorio.md)
 
 -   [Ejecutar código C#](./Ejecutar_Codigo_C%23.md)
+
+-   [Ejecutar tests C#](./Ejecutar_Tests_C%23.md)
