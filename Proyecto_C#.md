@@ -43,13 +43,17 @@ A continuación se detallan los comandos para crear proyectos de C# con la estru
 
 9 - Creamos un proyecto nuevo de test (NUnit) llamado Library.Test dentro del directorio Test.
 
-`cd Test`
-`dotnet new nunit -n Library.Test`
+```bash
+cd Test
+dotnet new nunit -n Library.Test
+```
 
 10 — Navegamos al proyecto de test (Library.Test) y agregamos una referencia al proyecto de biblioteca (Library)
 
-`cd Library.Test`
-`dotnet add Library.Test.csproj reference ../../Library/Library.csproj`
+```bash
+cd Library.Test
+dotnet add Library.Test.csproj reference ../../Library/Library.csproj
+```
 
 
 Al final de estos pasos, deberías tener en el directorio de tu proyecto la siguiente estructura:
