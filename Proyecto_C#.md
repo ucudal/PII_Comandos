@@ -45,6 +45,7 @@ A continuación se detallan los comandos para crear proyectos de C# con la estru
 
 ```bash
 cd Test
+
 dotnet new nunit -n Library.Test
 ```
 
@@ -52,6 +53,7 @@ dotnet new nunit -n Library.Test
 
 ```bash
 cd Library.Test
+
 dotnet add Library.Test.csproj reference ../../Library/Library.csproj
 ```
 
