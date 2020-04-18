@@ -1,6 +1,5 @@
-# Ejecutar tests C#
-## FIT
-### Universidad Católica del Uruguay
+## Ejecutar tests C#
+
 
 0 - Navegar a la raiz del proyecto de test. Asumimos que el proyecto tiene la estructura base del curso. Cambiar `Library.Test` por el nombre del proyecto de test.
 
