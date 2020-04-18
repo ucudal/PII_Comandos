@@ -1,6 +1,5 @@
-# Comandos para crear un proyecto de C#
-## FIT
-### Universidad Católica del Uruguay
+## Comandos para crear un proyecto de C#
+
 
 A continuación se detallan los comandos para crear proyectos de C# con la estructura base que utilizaremos en el curso.
 
