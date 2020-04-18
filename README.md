@@ -6,8 +6,11 @@ Esta es una referencia de algunos comandos que usaremos en el curso. Oficia de p
 
 En algunos casos, los comandos para Windows varían de Linux/MacOS. En estos casos indicaremos cuál es la versión a utilizar para cada plataforma:
 
--   Comandos de Windows: *_[W]_*
--   Comandos de Linux/Mac OS: *_[L/M]_*
+![windows](./assets/gh-windows.svg) &nbsp; Comandos de Windows
+
+![linux](./assets/gh-linux.svg) &nbsp; Comandos de Linux
+
+![mac](./assets/gh-mac.svg) &nbsp; Comandos de Mac OS
 
 ## Comandos
 
