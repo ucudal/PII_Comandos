@@ -1,6 +1,5 @@
-# Comandos para crear un repositorio GIT
-## FIT
-### Universidad Católica del Uruguay
+## Comandos para crear un repositorio GIT
+
 
 0 - Navegamos hasta el directorio donde crearemos el repositorio
 
