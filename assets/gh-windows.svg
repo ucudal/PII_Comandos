@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="91" height="23" viewBox="0 0 91 23">
+  <defs>
+    <linearGradient id="gh-windows-a" x1="121.075%" x2="40.175%" y1="53.194%" y2="44.528%">
+      <stop offset="0%" stop-color="#46BCF9"/>
+      <stop offset="100%" stop-color="#1A40B9"/>
+      <stop offset="100%" stop-color="#1A40B9"/>
+    </linearGradient>
+    <rect id="gh-windows-b" width="91" height="23" x="0" y="0" rx="4"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <rect width="91" height="23" fill="url(#gh-windows-a)" rx="4"/>
+    <mask id="gh-windows-c" fill="#fff">
+      <use xlink:href="#gh-windows-b"/>
+    </mask>
+    <path fill="#052370" d="M0 0H28.115V23.5H0z" mask="url(#gh-windows-c)"/>
+    <text fill="#FFF" font-family="Helvetica" font-size="11" letter-spacing=".157">
+      <tspan x="34.5" y="15">Windows</tspan>
+    </text>
+    <g fill="#04ABE7" transform="translate(7.087 5)">
+      <path d="M6.189 1.589L6.189 6.75 13.263 6.75 13.263 0z"/>
+      <path d="M6.189 9.214L6.189 14.375 13.263 14.375 13.263 7.625z" transform="matrix(1 0 0 -1 0 22)"/>
+      <path d="M5.357 1.9L5.357 6.75 0.987 6.75 0.987 2.937z"/>
+      <path d="M5.357 7.625L5.357 12.475 0.987 12.475 0.987 8.445z" transform="matrix(1 0 0 -1 0 20.1)"/>
+    </g>
+  </g>
+</svg>
