@@ -1,6 +1,6 @@
-# PII - Referencia comandos
-## FIT
-### Universidad Católica del Uruguay
+![UCU](https://github.com/ucudal/PII_Conceptos_De_POO/raw/master/Assets/logo-ucu.png)
+# Guía de Comandos
+## FIT - Universidad Católica del Uruguay
 
 Esta es una referencia de algunos comandos que usaremos en el curso. Oficia de páginas amarillas de la terminal.
 
