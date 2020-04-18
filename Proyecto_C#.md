@@ -6,46 +6,63 @@ A continuación se detallan los comandos para crear proyectos de C# con la estru
 
 0 - Creamos una carpeta para nuestro proyecto. Cambiar "proyecto" por un nombre adecuado
 
-`mkdir proyecto`
+```bash
+mkdir proyecto
+```
 
 1 — Navegamos a la carpeta creada en el paso 0.
 
-`cd proyecto`
+```bash
+cd proyecto
+```
 
 2 — Creamos una carpeta src para nuestros proyectos de C#
 
-`mkdir src`
+```bash
+mkdir src
+```
 
 3 — Navegamos a la carpeta src
 
-`cd src`
+```bash
+cd src
+```
 
 4 — Creamos un proyecto nuevo de consola llamado Program
 
-`dotnet new console -n Program`
+```bash
+dotnet new console -n Program
+```
 
 5 — Creamos un proyecto nuevo de biblioteca llamado Library
 
-`dotnet new classlib -n Library`
+```bash
+dotnet new classlib -n Library
+```
 
 6 - Navegamos al proyecto de consola (Program) y agregamos una referencia al proyecto de biblioteca (Library)
 
-`cd Program`
-`dotnet add Program.csproj reference ../Library/Library.csproj`
+```bash
+cd Program
+dotnet add Program.csproj reference ../Library/Library.csproj
+```
 
 7 - Navegamos hacia atrás, nuevamente a src/
 
-`cd ..`
+```bash
+cd ..
+```
 
 8 - Creamos un directorio Test para los proyectos de test.
 
-`mkdir Test`
+```bash
+mkdir Test
+```
 
 9 - Creamos un proyecto nuevo de test (NUnit) llamado Library.Test dentro del directorio Test.
 
 ```bash
 cd Test
-
 dotnet new nunit -n Library.Test
 ```
 
@@ -53,7 +70,6 @@ dotnet new nunit -n Library.Test
 
 ```bash
 cd Library.Test
-
 dotnet add Library.Test.csproj reference ../../Library/Library.csproj
 ```
 
