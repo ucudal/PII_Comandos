@@ -1,6 +1,5 @@
-# Ejecutar código C#
-## FIT
-### Universidad Católica del Uruguay
+## Ejecutar código C#
+
 
 0 - Navegar a la raiz del proyecto a ejecutar. Por ejemplo, al proyecto Program.
 
