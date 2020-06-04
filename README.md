@@ -21,3 +21,5 @@ En algunos casos, los comandos para Windows varían de Linux/MacOS. En estos cas
 -   [Ejecutar código C#](./Ejecutar_Codigo_C%23.md)
 
 -   [Ejecutar tests C#](./Ejecutar_Tests_C%23.md)
+
+-   [Generar documentación con DocFx](./Generar_Documentacion_Docfx.md)
