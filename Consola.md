@@ -24,10 +24,12 @@ Ya habrás notado que linux utiliza el símbolo **/** para la estructura de carp
 
 Lo mismo pasa con los archivos, **". .\prog2.txt"** hace referencia a un archivo de nombre prog2.txt que se encuentra en una carpeta superior. ¿Superior a quién?, superior a la carpeta donde nos encontremos actualmente.
 
-Pero, ¿esto de las rutas absolutas solo para Windows? No, es análogo en Linux (o Mac) pero con el comando **ls**. El comando **ls** nos permite obtener la lista de archivos del directorio actual, **"ls . . "** la del directorio de nivel superior y **"ls . ./. ."** son dos niveles superiores.
+Pero, ¿esto de las rutas absolutas es solo para Windows? No, es análogo en Linux (o Mac) pero con el comando **ls**. El comando **ls** nos permite obtener la lista de archivos del directorio actual, **"ls . . "** la del directorio de nivel superior y **"ls . ./. ."** son dos niveles superiores.
 
 ### Cambio de directorio
 Ahora necesitamos movernos en el sistema de archivos y eso lo hacemos con el comando **cd**. Esto por surte, funciona igual en todos los sistema operativos. Así que si estamos en linux ubicado en la carpeta /home/usuarioUCU y queremos ubicarnos en la carpeta "Desktop" de nivel inverior, ejecutaremos **"cd Desktop"** y ahora estamos en la carpeta que también llamamos hija. Claro, con **cd . .** volvemos a ubicarnos en la carpeta padre.
+
+Es probable que muchas vecees te sientas confundido al no saber en qué directorio o carpeta nos encontramos. Muy bien, Windows te lo dirá con el comando **cd** y Linux con el comando **pwd**
 
 ### Creando y borrando
 Me gustaría crear un nuevo directorio. No hay problema **md** (Windows) o **mkdir** (Linux, Mac) seguido por un nombre adecuado nos permite hacerlo. La nueva carpeta se crea en la ubicación actual, es decir será una carpeta hija.
