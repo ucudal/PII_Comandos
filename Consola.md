@@ -32,7 +32,7 @@ Ahora necesitamos movernos en el sistema de archivos y eso lo hacemos con el com
 Es probable que muchas veces te sientas confundido al no saber en qué directorio o carpeta nos encontramos. Muy bien, Windows te lo dirá con el comando **cd** y Linux con el comando **pwd**
 
 ### Creando y borrando
-Me gustaría crear un nuevo directorio. No hay problema **md** (Windows) o **mkdir** (Linux, Mac) seguido por un nombre adecuado nos permite hacerlo. La nueva carpeta se crea en la ubicación actual, es decir será una carpeta hija.
+Me gustaría crear un nuevo directorio. No hay problema **mkdir** (Windows, Linux, Mac) seguido por un nombre adecuado nos permite hacerlo. La nueva carpeta se crea en la ubicación actual, es decir será una carpeta hija.
 
-¿Y si quiere borrar?  Ya sea que estemos borrando un archivo o una carpeta, **del** (en Windows o **rm** (Linux, Mac) seguido por el nombre del recurso a borrar nos permite eliminar **definitivamente** el mismo.
+¿Y si quiere borrar?  Ya sea que estemos borrando un archivo o una carpeta, **rmdir** (Windows, Linux, Mac) seguido por el nombre del recurso a borrar nos permite eliminar **definitivamente** el mismo.
 
