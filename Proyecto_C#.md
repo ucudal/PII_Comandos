@@ -46,9 +46,10 @@ cd Program
 dotnet add Program.csproj reference ../Library/Library.csproj
 ```
 
-7 - Navegamos hacia atrás, nuevamente a src/
+7 - Navegamos hacia atrás, hasta la carpeta "proyecto"
 
 ```bash
+cd ..
 cd ..
 ```
 
@@ -69,7 +70,7 @@ dotnet new nunit -n Library.Test
 
 ```bash
 cd Library.Test
-dotnet add Library.Test.csproj reference ../../Library/Library.csproj
+dotnet add Library.Test.csproj reference ../../src/Library/Library.csproj
 ```
 
 
@@ -81,7 +82,7 @@ src/
         Program.csproj
     Library/
         Library.csproj
-    Test/
-        Library.Test/
-            Library.Test.csproj
+Test/
+     Library.Test/
+     Library.Test.csproj
 ```
