@@ -1,10 +1,10 @@
 ## Comandos para crear un repositorio GIT
 
 
-0 - Navegamos hasta el directorio donde crearemos el repositorio
+0 - Navegamos hasta la carpeta donde crearemos el repositorio, típicamente la carpeta raíz donde está nuestro proyecto. Cambiar `proyecto` por el nombre que corresponda.
 
 ```bash
-cd <directorio>
+cd proyecto
 ```
 
 1 - Creamos el repositorio git
@@ -13,28 +13,20 @@ cd <directorio>
 git init
 ```
 
-2 - Creamos un archivo .gitignore. Puedes copiar uno de otro proyecto, o descargar [este](https://github.com/dotnet/core/blob/master/.gitignore).
+2 - Creamos un archivo .gitignore adecuado para proyectos C#. Puedes descargar [este](https://github.com/dotnet/core/blob/master/.gitignore) o usar el comando:
 
-![mac](./assets/gh-mac.svg)  ![linux](./assets/gh-linux.svg)  
 ```bash
-touch .gitignore
+dotnet new gitignore
 ```
-
-![windows](./assets/gh-windows.svg)  
-```bash
-echo $null >> .gitignore
-```
-
-Agregar el contenido del .gitignore manualmente.
 
 3 - Creamos un archivo README.md
 
-![mac](./assets/gh-mac.svg)  ![linux](./assets/gh-linux.svg)  
+![mac](./assets/gh-mac.svg)  ![linux](./assets/gh-linux.svg)
 ```bash
 touch README.md
 ```
 
-![windows](./assets/gh-windows.svg)   
+![windows](./assets/gh-windows.svg)
 ```bash
 echo $null >> README.md
 ```

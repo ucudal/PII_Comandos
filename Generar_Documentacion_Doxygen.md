@@ -8,8 +8,11 @@ Antes de generar la documentación del proyecto es necesario crear un archivo de
 ```bash
 mkdir docs
 ```
-Linux/Mac
+
+![linux](./assets/gh-linux.svg) ![mac](./assets/gh-mac.svg)
+```bash
 md docs
+``````
 
 2 - Inicializamos Doxygen dentro de docs/
 

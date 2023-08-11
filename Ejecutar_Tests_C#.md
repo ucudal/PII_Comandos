@@ -4,7 +4,7 @@
 0 - Navegar a la raiz del proyecto de test. Asumimos que el proyecto tiene la estructura base del curso. Cambiar `Library.Test` por el nombre del proyecto de test.
 
 ```bash
-cd src/Test/Library.Test
+cd test/Library.Test
 ```
 
 Allí debe existir un con extensión ".csproj".
