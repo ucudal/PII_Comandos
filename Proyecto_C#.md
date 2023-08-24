@@ -105,7 +105,7 @@ cd test
 dotnet new nunit -n Library.Tests
 ```
 
-10 — Navegamos al proyecto de test `LibraryTests` y agregamos una referencia al proyecto de biblioteca `Library`. Esto es para que nuestros tests puedan acceder a las clases que creemos en las librerías.
+10 — Navegamos al proyecto de test `Library.Tests` y agregamos una referencia al proyecto de biblioteca `Library`. Esto es para que nuestros tests puedan acceder a las clases que creemos en las librerías.
 
 ```bash
 cd Library.Tests
@@ -161,14 +161,14 @@ dotnet add Program.csproj reference ../Library/Library.csproj
 cd ..
 cd ..
 cd test
-dotnet new nunit -n LibraryTests
-cd LibraryTests
-dotnet add LibraryTests.csproj reference ../../src/Library/Library.csproj
+dotnet new nunit -n Library.Tests
+cd Library.Tests
+dotnet add Library.Tests.csproj reference ../../src/Library/Library.csproj
 cd ..
 cd ..
 dotnet sln add src/Library/Library.csproj
 dotnet sln add src/Program/Program.csproj
-dotnet sln add test/LibraryTests/LibraryTests.csproj
+dotnet sln add test/Library.Tests/Library.Tests.csproj
 dotnet new gitignore
 code .
 ```
