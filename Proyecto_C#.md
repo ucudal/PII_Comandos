@@ -2,13 +2,48 @@
 
 A continuación se detallan los comandos para crear proyectos de C# con la estructura base que utilizaremos en el curso.
 
-0 – Creamos una carpeta para nuestro proyecto. Cambiar `proyecto` por el nombre que corresponda.
+> :warning: **Recomendación** Elijan una carpeta en su disco local para guardar todos los proyectos de este curso. Conozcan la ruta a esa carpeta y sepan cómo llegar a ella desde la línea de comandos o la terminal.
+
+:question: ¿Cómo abrir la línea de comandos desde Windows Explorer? Navega hasta la carpeta que quieras abrir en la línea de comandos, haz clic con el botón secundario del mouse, y utiliza el comando **Open in Terminal**:
+![](./assets/Abrir%20terminal%20desde%20Windows%20Explorer.gif)
+
+:question: ¿Cómo abrir la terminal desde Finder en Mac OS? En caso de que tu Finder no muestre la barra de carpetas, usa el comando **Show Path Bar** en el menú **View** para mostrarla; luego navega hasta la carpeta que quieras abrir luego, haz clic con el botón secundario del mouse en la barra de carpetas, y utiliza el comando **Open in Terminal**:
+![](./assets/Abrir%20terminal%20desde%20Finder.gif)
+
+En C# vamos a trabajar con diferentes proyectos. Cada proyecto va en su propia carpeta. La estructura de carpetas que vamos a crear es la siguiente:
+
+```
+  docs/
+    ...
+  src/
+    Program/
+      ...
+    Library/
+      ...
+  test/
+    Library.Tests/
+      ...
+```
+
+En la carpeta `docs` vamos a generar la documentación de nuestro código. No te preocupes, no vas a tener que escribir la misma documentación dos veces, vamos a generarla automáticamente a partir de comentarios que incluyas en el código más adelante. Mientras no te hayamos mostrado cómo generar la documentación, puedes omitir esta carpeta. :warning: Cuidado, cuando te pidamos que generes documentación, no podrás omitir esa carpeta.
+
+En la carpeta del proyecto hay dos carpetas, `src` y `test`. En `src` está el código de nuestras clases del proyecto. En `test` está el código de las clases de prueba. En caso de que tu proyecto no tenga clases de prueba, puedes omitir la carpeta `test`. :warning: Cuidado, cuando te pidamos que hagas casos de prueba, no podrás omitir esa carpeta.
+
+En la carpeta `src` hay dos carpetas, `Library` y `Program`. En `Library` pondremos el proyecto –un proyecto de librería– y el código de todas las clases que use nuestro programa principal. En `Program` pondremos el proyecto –que típicamente es un proyecto de consola– y el código del programa principal que usa las demás clases.
+
+En la carpeta `test` hay una carpeta `Library.Test`. En esta carpeta estará el proyecto de prueba y las clases de prueba de las que programemos en `Library`. Habrá una clase de prueba por cada clase en `Library`.
+
+:question: ¿Por qué es necesaria esta estructura de carpetas? En un programa muy sencillo, no es necesaria; en programas más complejos, habrá muchas clases, y para que sea fácil encontrarlas, es mejor saber dónde buscarlas.
+
+A continuación te daremos paso a paso los comandos que debes ejecutar en la línea de comandos o la terminal para crear esta estructura de carpetas y los respectivos proyectos.
+
+0 – Creamos una carpeta para nuestro proyecto. Cambiar `proyecto` por el nombre que corresponda. Este comando tenemos que ejecutarlo en la carpeta donde guardamos todos nuestros proyectos; te mostramos más arriba cómo llegar a ella.
 
 ```bash
 mkdir proyecto
 ```
 
-1 – Navegamos a la carpeta creada en el paso 0.
+1 – Nos movemos a la carpeta creada en el paso 0. Esto es para simplificar los comandos que siguen, porque no tendremos que decirles en qué carpeta se ejecutan, sino que asumirán la carpeta actual.
 
 ```bash
 cd proyecto
@@ -31,7 +66,7 @@ mkdir docs
 mkdir test
 ```
 
-4 — Navegamos a la carpeta `src`.
+4 — Navegamos a la carpeta `src`. De nuevo, esto es para simplificar los comandos que siguen, que asumen que la carpeta en la que se ejecutan es la carpeta actual.
 
 ```bash
 cd src
@@ -84,7 +119,7 @@ cd ..
 cd ..
 ```
 
-12 - Agregar los tres proyectos creados a la solución.
+12 - Agregar los tres proyectos creados a la solución. Esto es para poder compilar todos nuestros proyectos de una sola vez.
 
 ```bash
 dotnet sln add src/Library/Library.csproj
@@ -100,6 +135,7 @@ dotnet new gitignore
 Al final de estos pasos, deberías tener en el directorio de tu proyecto la siguiente estructura de directorios:
 
 ```
+docs/
 src/
     Program/
         Program.csproj
@@ -107,10 +143,10 @@ src/
         Library.csproj
 test/
      Library.Tests/
-     Library.Tests.csproj
+        Library.Tests.csproj
 ```
 
-También podríamos crear un .bat que contenga todos los comandos mencionados anteriormente y agregarlo a la variable path para que lo podamos ejecutar dentro de cualquier carpeta de proyecto previamente creada. Hasta puedo hacer que me abra code.
+También podríamos crear un .bat que contenga todos los comandos mencionados anteriormente y agregarlo a la variable path para que lo podamos ejecutar dentro de cualquier carpeta de proyecto previamente creada. Hasta puedo hacer que me abra Visual Studio Code.
 
 ```bash
 dotnet new sln
