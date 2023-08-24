@@ -161,14 +161,14 @@ dotnet add Program.csproj reference ../Library/Library.csproj
 cd ..
 cd ..
 cd test
-dotnet new nunit -n Library.Tests
+dotnet new nunit -n LibraryTests
 cd LibraryTests
-dotnet add Library.Tests.csproj reference ../../src/Library/Library.csproj
+dotnet add LibraryTests.csproj reference ../../src/Library/Library.csproj
 cd ..
 cd ..
 dotnet sln add src/Library/Library.csproj
 dotnet sln add src/Program/Program.csproj
-dotnet sln add test/Library.Tests/Library.Tests.csproj
+dotnet sln add test/LibraryTests/LibraryTests.csproj
 dotnet new gitignore
 code .
 ```
