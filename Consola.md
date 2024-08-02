@@ -69,8 +69,8 @@ lo cual suele ser sumamente práctico.
 
 ## ¿Cómo ejecutar un comando?
 
-Escribir el comando —o pegar un comando previamente copiado desde el
-portapapeles— y presionar <kbd>Enter</kbd>. Por ejemplo, el comando `echo`
+Escribe el comando —o pega un comando previamente copiado desde el
+portapapeles— y presiona <kbd>Enter</kbd>. Por ejemplo, el comando `echo`
 imprime en la consola lo que sigue al comando:
 
 ```bash
@@ -138,6 +138,14 @@ formas).
 Aunque parezca más complejo, es importante que te acostumbres a usar rutas
 relativas. Muchos archivos de un proyecto hacen referencia a otros archivos, si
 usas rutas relativas, no importa dónde esté el proyecto.
+
+> [!TIP]
+> Cuando tengas que escribir nombres de carpetas o archivos como parámetros en
+> un comando, escribe las primeras letras y oprime <kbd>Tab</kbd>; verás como
+> se completa con el nombre de la carpeta o archivo que comience con las letras
+> que has escrito. Esto evita que tengas que escribir todo el nombre. Si hay más
+> de un nombre que comienza con las letras que haz escrito, continúa oprimiendo
+> <kbd>Tab</kbd> hasta que aparezca el que deseas.
 
 ## Listar el contenido de un directorio: sus archivos y directorios
 
