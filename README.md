@@ -1,27 +1,34 @@
-![UCU](https://github.com/ucudal/PII_Conceptos_De_POO/raw/master/Assets/logo-ucu.png)
-# Guía de Comandos
-## FIT - Universidad Católica del Uruguay
+<img alt="UCU" src="https://www.ucu.edu.uy/plantillas/images/logo_ucu.svg"
+width="150"/>
 
-Esta es una referencia de algunos comandos que usaremos en el curso. Oficia de páginas amarillas de la terminal.
+# Universidad Católica del Uruguay
+
+## Facultad de Ingeniería y Tecnologías
+
+### Programación II
+
+# Guía de comandos
+
+Esta es una referencia de algunos comandos que usaremos en el curso. Oficia de
+páginas amarillas de la consola, también llamada terminal.
 
 En algunos casos, los comandos para Windows varían de Linux/MacOS. En estos casos indicaremos cuál es la versión a utilizar para cada plataforma:
 
-![windows](./assets/gh-windows.svg) &nbsp; Comandos de Windows
+![windows](https://img.shields.io/badge/Windows-0078D6?style=flat&logo=windows&logoColor=white) Comandos de Windows
 
-![linux](./assets/gh-linux.svg) &nbsp; Comandos de Linux
-
-![mac](./assets/gh-mac.svg) &nbsp; Comandos de Mac OS
+![macOS](https://img.shields.io/badge/macOS-000000?style=flat&logo=apple&logoColor=white)
+Comandos de Mac OS
 
 ## Comandos
 
--   [Comandos de consola](./Consola.md)
+- [Comandos de consola](./Consola.md)
 
--   [Crear un proyecto de C#](./Proyecto_C%23.md)
+- [Crear un proyecto de C#](./Crear_Proyecto_C%23.md)
 
--   [Crear un repositorio (local)](./Repositorio.md)
+- [Crear un repositorio (local)](./Repositorio.md)
 
--   [Ejecutar código C#](./Ejecutar_Codigo_C%23.md)
+- [Ejecutar código C#](./Ejecutar_Codigo_C%23.md)
 
--   [Ejecutar tests C#](./Ejecutar_Tests_C%23.md)
+- [Ejecutar tests C#](./Ejecutar_Tests_C%23.md)
 
--   [Generar documentación con Doxygen](./Generar_Documentacion_Doxygen.md)
+- [Generar documentación con Doxygen](./Generar_Documentacion_Doxygen.md)

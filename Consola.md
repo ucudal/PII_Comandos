@@ -1,45 +1,205 @@
+# Consola
 
-## Primero lo primero... ¿Qué es la consola del sistema operativo?
+## Primero lo primero... ¿qué es la consola del sistema operativo?
 
-La consola, la interfaz de comandos o la línea de comandos, es una interfaz que nos permite enviar **comandos** a nuestro sistema operativo por medio de una línea de texto.
+La consola, también llamada terminal, interfaz de comandos o línea de comandos,
+es una interfaz que nos permite enviar **comandos** a nuestro sistema operativo
+por medio de una línea de texto.
 
-Pero, ¿porqué es importante conocer la consola? Nos permite **mayor control** sobre el sistema operativo y las aplicaciones, nos permite **ejecutar un conjunto de comandos** para automatizar tareas (scripts) y utilizamos **menos recursos** del sistema operativo (memoria, cpu).
+Pero, ¿porqué es importante conocer la consola? Nos permite **mayor control**
+sobre el sistema operativo y las aplicaciones, nos permite **ejecutar un
+conjunto de comandos** para automatizar tareas (scripts) y utilizamos **menos
+recursos** del sistema operativo (memoria, CPU).
 
-Ya sea que utilices **Windows, Linux o Mac**, aquí vamos con una introducción básica a los comando que utilizaremos, pero recuerda, la consola es muy potente y tendrás cientos de comandos que nos pueden resultar útiles.
+Ya sea que utilices Windows o Mac OS, aquí vamos con una introducción
+básica a los comando que utilizaremos, pero recuerda, la consola es muy potente
+y tendrás cientos de comandos que nos pueden resultar útiles.
 
-Comencemos por los archivos y carpetas, nuestro sistema operativo nos permite manipular una estructura jerárquica donde organizamos nuestros archivos en directorios o carpetas:
+## ¿Cómo iniciar la consola?
 
-### Listar archivos
-Para ver un listado de los archivos en una carpeta, podemos utilizar el comando `ls` ![linux](./assets/gh-linux.svg) ![mac](./assets/gh-mac.svg) o `dir` ![windows](./assets/gh-windows.svg) y veremos como resultado el lista de archivos en la carpeta actual.
+Depende del sistema operativo.
 
-### Rutas (absolutas y relativas)
-Una ruta, es una ubicación dentro de nuestro sistema de archivos. Por ejemplo:
+![windows](https://img.shields.io/badge/Windows-0078D6?style=flat&logo=windows&logoColor=white)
 
- - En ![linux](./assets/gh-linux.svg) ![mac](./assets/gh-mac.svg), `/home/usuario/Desktop/prog2.txt` es una **ruta absoluta** al archivo `prog2.txt` que se encuentra en la carpeta `/home/usuario/Desktop`.
- - En [windows](./assets/gh-windows.svg), las carpetas están ubicadas, además, en unidades de disco, así que una ruta absoluta podría ser `c:\Users\usuario\Desktop\prog2.txt`.
+Hay varias formas. Una es presionar simultáneamente <kbd>![Windows]</kbd>+<kbd>R</kbd>,
+escribrir `cmd`, y presionar <kbd>Enter</kbd>.
 
-Ya habrás notado que linux utiliza el símbolo `/` para la estructura de carpetas y Windows utiliza el símbolo `\` (aunque Windows lo entiende de ambas formas).
+<img src="./assets/Run-Win.png" alt="Run en Windows" width="206"/>
 
-¿Y las rutas relativas? Bueno, las rutas relativas están determinadas por la ubicación que tengamos dentro del sistema de archivos cuando ejecutamos un comando. Así que si estamos trabajando en la carpeta `c:\Users\usuarioU\Desktop` y ejecutamos ejecutamos el comando `dir`, obtendremos la lista de archivos en esa ubicación, pero si ejecutamos el comando `dir ..` entonces tendremos el lista de la carpeta de nivel superior. No importa donde nos ubiquemos, siempre `..` hará referencia a la carpeta de nivel superior. Ya habrás intentado qué pasa cuando ponemos `dir ..\..`, sí, tenemos el lista de los archivos 2 niveles arriba de la ubicación actual.
+<img src="./assets/Terminal-Win.png" alt="Terminal en Windows" width="488"/>
 
-Lo mismo pasa con los archivos, `..\prog2.txt` hace referencia a un archivo de nombre `prog2.txt` que se encuentra en una carpeta superior. ¿Superior a quién?, superior a la carpeta donde nos encontremos actualmente.
+![macOS](https://img.shields.io/badge/macOS-000000?style=flat&logo=apple&logoColor=white)
 
-Pero, ¿esto de las rutas absolutas es solo para Windows? No, es análogo en Linux (o Mac) pero con el comando `ls`. El comando `ls` nos permite obtener la lista de archivos del directorio actual, `ls ..` la del directorio de nivel superior y `ls ../..` son dos niveles superiores.
+También hay varias formas. Una es presionar <kbd>⌘
+Command</kbd>+<kbd>Spacebar</kbd>, escribir `terminal`, y presionar <kbd>Enter</kbd>.
 
-### Cambio de directorio
-Ahora necesitamos movernos en el sistema de archivos y eso lo hacemos con el comando `cd`. Esto por suerte, funciona igual en todos los sistema operativos. Así que si estamos en Linux ubicado en la carpeta `/home/usuario` y queremos ubicarnos en la carpeta `Desktop` de nivel inverior, ejecutaremos `cd Desktop` y ahora estamos en la carpeta que también llamamos hija. Claro, con `cd ..` volvemos a ubicarnos en la carpeta padre.
+<img src="./assets/Spotlight-Mac.png" alt="Spotlight en Mac" width="300"/>
 
-Es probable que muchas veces te sientas confundido al no saber en qué directorio o carpeta nos encontramos. Muy bien, Windows te lo dirá con el comando `cd` y Linux/Mac con el comando `pwd`.
+<img src="./assets/Terminal-Mac.png" alt="Terminal en Mac" width="285"/>
 
-### Creando y borrando
+![windows](https://img.shields.io/badge/Windows-0078D6?style=flat&logo=windows&logoColor=white)
+
+:question: ¿Cómo abrir la línea de comandos desde Windows Explorer? Navega hasta
+la carpeta que quieras abrir en la línea de comandos, haz clic con el botón
+secundario del mouse, y utiliza el comando **Open in Terminal**:
+
+<img src="./assets/Open%20Terminal%20Windows.gif" alt="Abrir Terminal en Windows" width="383"/>
+</p>
+
+![macOS](https://img.shields.io/badge/macOS-000000?style=flat&logo=apple&logoColor=white)
+
+:question: ¿Cómo abrir la terminal desde Finder en Mac OS? En caso de que tu
+Finder no muestre la barra de carpetas, usa el comando **Show Path Bar** en el
+menú **View** para mostrarla; luego navega hasta la carpeta que quieras abrir
+luego, haz clic con el botón secundario del mouse en la barra de carpetas, y
+utiliza el comando **Open in Terminal**:
+
+<img src="./assets/Open%20Terminal%20MacOS.gif" alt="Abrir Terminal en MacOS" width="383"/>
+
+También es posible iniciar la consola desde Rider, haciendo clic en el icono
+![](https://intellij-icons.jetbrains.design/icons/TerminalIcons/icons/expui/toolwindow/terminal_dark.svg)
+que aparece en la barra de herramientas vertical izquierda. Es lo más
+recomendable si estás trabajando en un proyecto en Rider y debes usar la
+consola:
+
+<img src="./assets/Terminal-Rider.gif" alt="Terminal en Rider" width="365"/>
+
+Rider abre la terminal en la carpeta donde está el proyecto que tienes abierto,
+lo cual suele ser sumamente práctico.
+
+## ¿Cómo ejecutar un comando?
+
+Escribir el comando —o pegar un comando previamente copiado desde el
+portapapeles— y presionar <kbd>Enter</kbd>. Por ejemplo, el comando `echo`
+imprime en la consola lo que sigue al comando:
+
+```bash
+echo Esto es una consola
+```
+
+En lo que acabas de ejecutar `echo` es el comando y `Esto es una consola` es un
+parámetro. Un parámetro de un comando es una información adicional que se
+proporciona a un comando para especificar cómo debe ejecutarse. Los parámetros
+pueden ser opciones o argumentos que modifican el comportamiento del comando. En
+este caso, el parámetro indica qué es lo que queremos que se imprima.
+
+Al ejecutar el comando verás el resultado:
+
+```bash
+Esto es una consola
+```
+
+> [!TIP]
+> Las teclas <kbd>↑</kbd> y <kbd>↓</kbd> te permiten ver los comandos que has
+> ejecutando antes; es útil para repetir un comando sin tener que escribirlo
+> nuevamente. Una vez que has llegado al comando deseado, puedes editarlo, o
+> presionar <kbd>Enter</kbd> para ejecutarlo.
+
+El comando `echo` funciona igual en Windows y en MacOS. Otros comandos son
+diferentes dependiendo del sistema operativo que estés usando.
+
+## Directorios, archivos, rutas absolutas y relativas
+
+Un directorio es una ubicación que puede contener archivos y otros directorios.
+Es similar a una carpeta y se utiliza para tus archivos organizados.
+
+Cuando usas la consola, estás ubicado en un directorio, que se llama el
+directorio actual o directorio de trabajo.
+
+Para saber cuál es ese directorio, ejecuta el comando
+![windows](https://img.shields.io/badge/Windows-0078D6?style=flat&logo=windows&logoColor=white)
+`cd` o
+![macOS](https://img.shields.io/badge/macOS-000000?style=flat&logo=apple&logoColor=white)
+`pwd`.
+
+Muchos comandos reciben archivos o directorios como parámetro. Para indicar
+dónde está el archivo o el directorio tenemos que indicar su ruta. Las rutas
+pueden ser absolutas o relativas:
+
+- Ruta absoluta: Se especifica la ruta desde la raíz. Por ejemplo
+  `C:\Users\lucho\archivo.txt` en el caso de Windows o
+  `/Users/lucho/archivo.txt` en el caso de Mac OS. En ambos casos el archivo
+  `archivo.txt` está en la carpeta `lucho`, que a su vez está en la carpeta
+  `Users`, que a su vez está en la raíz. En este ejemplo la raíz es `C:\` en
+  Windows y `/` en Mac OS.
+- Ruta relativa: Se especifica la ruta desde el directorio acutal, por eso es
+  relativa. Por ejemplo, si el directorio actual es `C:\Users\lucho` o
+  `/Users/lucho`, la ruta relativa hacia el archivo sería `.\archivo.txt` o
+  `./archivo.txt` en Windows o Mac OS respectivamente. El `.` se traduce como
+  "el directorio actual".
+
+  También se puede escribir `..` para hacer referencia al directorio "padre" del
+  directorio actual, es decir, el directorio que contiene el directorio actual.
+
+Ya habrás notado que Mac OS utiliza el símbolo `/` para la estructura de
+directoris y Windows utiliza el símbolo `\` (aunque Windows lo entiende de ambas
+formas).
+
+Aunque parezca más complejo, es importante que te acostumbres a usar rutas
+relativas. Muchos archivos de un proyecto hacen referencia a otros archivos, si
+usas rutas relativas, no importa dónde esté el proyecto.
+
+## Listar el contenido de un directorio: sus archivos y directorios
+
+Para ver un listado de los archivos y directorios en un directorio, podemos
+utilizar el comando
+![windows](https://img.shields.io/badge/Windows-0078D6?style=flat&logo=windows&logoColor=white)
+`dir` o
+![macOS](https://img.shields.io/badge/macOS-000000?style=flat&logo=apple&logoColor=white)
+`ls`.
+
+Si no usamos ningún parámetro, veremos como resultado el listado de archivos y
+directorios en el directorio actual; veremos lo mismo si usamos `ls .` o `dir
+.`.
+
+Para ver los archivos y directorios del directorio padre, usamos `ls ..` o `dir
+..`.
+
+## Cambiar el directorio actual a otro directorio
+
+Ahora necesitamos movernos en el sistema de archivos y eso lo hacemos con el
+comando `cd`. Esto por suerte, funciona igual en todos los sistema operativos.
+Así que si estamos en el directorio `/Users/lucho` y queremos ubicarnos en el
+directorio `Desktop` que está en `/Users/lucho`, ejecutaremos `cd Desktop` y
+ahora estamos en el directorio que llamamos hijo. ¿Recuerdas cuando mencionamos
+que `..` hace referencia al directorio padre cuando hablamos de rutas relativas?
+Con `cd ..` volvemos a ubicarnos en la carpeta padre.
+
+<!-- ### Creando y borrando
+
 Me gustaría crear un nuevo directorio. No hay problema `mkdir` (Windows, Linux, Mac) seguido por un nombre adecuado nos permite hacerlo. La nueva carpeta se crea en la ubicación actual, es decir será una carpeta hija.
 
 ¿Y si quiere borrar?  Ya sea que estemos borrando un archivo o una carpeta, `rmdir` (Windows, Linux, Mac) seguido por el nombre del recurso a borrar nos permite eliminar **definitivamente** el mismo.
 
 ### Renombrando archivos
+
 Si quiero cambiar el nombre de un archivo, en Linux/Mac, ejecuto el siguiente comando: `mv nombreviejoarchivo1.extension nombrenuevoarchivo1.extension`.
 Su equivalente en Windows es `rename nombreviejoarchivo1.extension nombrenuevoarchivo1.extension` (en lugar de `rename` también se puede utilizar `ren`).
 
 A continuación un ejemplo básico:
-Tengo un archivo de extensión **txt**, con nombre **Viejo** y quiero renombrarlo a **Nuevo**. El comando en Linux/Mac sería `mv Viejo.txt Nuevo.txt`. Para este mismo caso en Windows será `rename Viejo.txt Nuevo.txt`.
+Tengo un archivo de extensión **txt**, con nombre **Viejo** y quiero renombrarlo a **Nuevo**. El comando en Linux/Mac sería `mv Viejo.txt Nuevo.txt`. Para este mismo caso en Windows será `rename Viejo.txt Nuevo.txt`. -->
 
+## Algunos comandos útiles
+
+|Funcionalidad|Windows|Linux|
+|-|-|-|
+|Mostrar los comandos disponibles|help|help|
+|Mostrar ayuda de un comando `comando`|comando /?|comando --help|
+|Salir del terminal|exit|exit|
+|Apagar el sistema|shutdown|halt|
+|Ver la versión del sistema operativo|ver|uname -a|
+|Limpiar la pantalla|cls|clear|
+|Imprimir un mensaje en pantalla|echo|echo|
+|Ver la carpeta actual|cd, chdir|pwd|
+|Cambiar de directorio|cd, chdir|cd|
+|Listar contenido de un directorio|dir|ls|
+|Listar contenido de un directorio en forma de árbol|tree|tree|
+|Crear un directorio|md, mkdir|mkdir|
+|Borrar un directorio|rmdir|rm|
+|Cambiar nombre de un directorio|rename|mv|
+|Crear un archivo vacío|echo > archivo|touch archivo|
+|Borrar archivo|del, erase|rm|
+|Cambiar nombre de un archivo|rename|mv|
+|Mostrar contenido de un archivo|type|cat|
+|Mostrar atributos del archivo|attrib|ls -l
+|Copiar archivos|copy|cp|
