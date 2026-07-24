@@ -1,4 +1,5 @@
-## Comandos para crear un proyecto de C#
+<!-- markdownlint-disable MD020 -->
+# Comandos para crear un proyecto de C#
 
 A continuación se detallan los comandos para crear proyectos de C# con la
 estructura base que utilizaremos en el curso.
@@ -9,32 +10,47 @@ estructura base que utilizaremos en el curso.
 
 Mira cómo abrir la consola [aquí](./Consola.md#cómo-iniciar-la-consola)
 
-
-
 En C# vamos a trabajar con diferentes proyectos. Cada proyecto va en su propia carpeta. La estructura de carpetas que vamos a crear es la siguiente:
 
+``` none
+├─ docs/
+│  └─ …
+├─ src/
+│  ├─ Program/
+│  │  └─ …
+│  └─ Library/
+│     └─ …
+└─ test/
+   └─ Library.Tests/
+      └─ …
 ```
-  docs/
-    ...
-  src/
-    Program/
-      ...
-    Library/
-      ...
-  test/
-    Library.Tests/
-      ...
-```
 
-En la carpeta `docs` vamos a generar la documentación de nuestro código. No te preocupes, no vas a tener que escribir la misma documentación dos veces, vamos a generarla automáticamente a partir de comentarios que incluyas en el código más adelante. Mientras no te hayamos mostrado cómo generar la documentación, puedes omitir esta carpeta. :warning: Cuidado, cuando te pidamos que generes documentación, no podrás omitir esa carpeta.
+En la carpeta `docs` vamos a generar la documentación de nuestro código. No te
+preocupes, no vas a tener que escribir la misma documentación dos veces, vamos a
+generarla automáticamente a partir de comentarios que incluyas en el código más
+adelante. Mientras no te hayamos mostrado cómo generar la documentación, puedes
+omitir esta carpeta. :warning: Cuidado, cuando te pidamos que generes
+documentación, no podrás omitir esa carpeta.
 
-En la carpeta del proyecto hay dos carpetas, `src` y `test`. En `src` está el código de nuestras clases del proyecto. En `test` está el código de las clases de prueba. En caso de que tu proyecto no tenga clases de prueba, puedes omitir la carpeta `test`. :warning: Cuidado, cuando te pidamos que hagas casos de prueba, no podrás omitir esa carpeta.
+En la carpeta del proyecto hay dos carpetas, `src` y `test`. En `src` está el
+código de nuestras clases del proyecto. En `test` está el código de las clases
+de prueba. En caso de que tu proyecto no tenga clases de prueba, puedes omitir
+la carpeta `test`. :warning: Cuidado, cuando te pidamos que hagas casos de
+prueba, no podrás omitir esa carpeta.
 
-En la carpeta `src` hay dos carpetas, `Library` y `Program`. En `Library` pondremos el proyecto –un proyecto de librería– y el código de todas las clases que use nuestro programa principal. En `Program` pondremos el proyecto –que típicamente es un proyecto de consola– y el código del programa principal que usa las demás clases.
+En la carpeta `src` hay dos carpetas, `Library` y `Program`. En `Library`
+pondremos el proyecto –un proyecto de librería– y el código de todas las clases
+que use nuestro programa principal. En `Program` pondremos el proyecto –que
+típicamente es un proyecto de consola– y el código del programa principal que
+usa las demás clases.
 
-En la carpeta `test` hay una carpeta `Library.Test`. En esta carpeta estará el proyecto de prueba y las clases de prueba de las que programemos en `Library`. Habrá una clase de prueba por cada clase en `Library`.
+En la carpeta `test` hay una carpeta `Library.Test`. En esta carpeta estará el
+proyecto de prueba y las clases de prueba de las que programemos en `Library`.
+Habrá una clase de prueba por cada clase en `Library`.
 
-:question: ¿Por qué es necesaria esta estructura de carpetas? En un programa muy sencillo, no es necesaria; en programas más complejos, habrá muchas clases, y para que sea fácil encontrarlas, es mejor saber dónde buscarlas.
+> :question: ¿Por qué es necesaria esta estructura de carpetas? En un programa
+> muy sencillo, no es necesaria; en programas más complejos, habrá muchas
+> clases, y para que sea fácil encontrarlas, es mejor saber dónde buscarlas.
 
 A continuación te daremos paso a paso los comandos que debes ejecutar en la línea de comandos o la terminal para crear esta estructura de carpetas y los respectivos proyectos.
 
@@ -57,6 +73,7 @@ dotnet new sln
 ```
 
 3 – Creamos las carpetas:
+
 - src: Para los proyectos donde escribiremos nuestro código.
 - docs: Para proyecto de documentación.
 - test: para proyecto de testing.
@@ -128,23 +145,24 @@ dotnet sln add src/Program/Program.csproj
 dotnet sln add test/Library.Tests/Library.Tests.csproj
 ```
 
-13 - Generar archivo .gitignore
+13 - Generar archivo `.gitignore`
+
 ```bash
 dotnet new gitignore
 ```
 
 Al final de estos pasos, deberías tener en el directorio de tu proyecto la siguiente estructura de directorios:
 
-```
-docs/
-src/
-    Program/
-        Program.csproj
-    Library/
-        Library.csproj
-test/
-     Library.Tests/
-        Library.Tests.csproj
+``` none
+├─ docs/
+├─ src/
+│  ├─ Program/
+│  │  └─ Program.csproj
+│  └─ Library/
+│     └─ Library.csproj
+└─ test/
+   └─ Library.Tests/
+      └─ Library.Tests.csproj
 ```
 
 También podríamos crear un .bat que contenga todos los comandos mencionados anteriormente y agregarlo a la variable path para que lo podamos ejecutar dentro de cualquier carpeta de proyecto previamente creada. Hasta puedo hacer que me abra Visual Studio Code.

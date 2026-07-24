@@ -1,5 +1,5 @@
-## Comandos para crear un repositorio GIT
-
+<!-- markdownlint-disable MD020 -->
+# Comandos para crear un repositorio GIT
 
 0 - Navegamos hasta la carpeta donde crearemos el repositorio, típicamente la carpeta raíz donde está nuestro proyecto. Cambiar `proyecto` por el nombre que corresponda.
 
@@ -22,11 +22,13 @@ dotnet new gitignore
 3 - Creamos un archivo README.md
 
 ![mac](./assets/gh-mac.svg)  ![linux](./assets/gh-linux.svg)
+
 ```bash
 touch README.md
 ```
 
 ![windows](./assets/gh-windows.svg)
+
 ```bash
 echo $null >> README.md
 ```

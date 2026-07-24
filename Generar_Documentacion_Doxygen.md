@@ -1,15 +1,17 @@
-## Comandos para generar documentación utilizando Doxygen
+# Comandos para generar documentación utilizando Doxygen
 
 Antes de generar la documentación del proyecto es necesario crear un archivo de configuración de Doxygen. Para ello, nos pararemos en la raiz de nuestra solución (repositorio), y crearemos primero una carpeta que almacene toda nuestra documentación (si no existe aún).
 
 1 - Crear `docs/`
 
 ![windows](./assets/gh-windows.svg)
+
 ```bash
 mkdir docs
 ```
 
 ![linux](./assets/gh-linux.svg) ![mac](./assets/gh-mac.svg)
+
 ```bash
 md docs
 ``````
@@ -20,6 +22,7 @@ md docs
 cd docs
 Doxygen -g
 ```
+
 Esto crea un archivo de configuración llamado `Doxyfile` con una configuración predenterminada.
 
 3 - Modificamos el archivo de configuración de Doxygen de la siguiente forma: abrir ```docs/Doxygen``` y editar las siguientes líneas:
@@ -36,6 +39,7 @@ Esto crea un archivo de configuración llamado `Doxyfile` con una configuración
 ++RECURSIVE              = YES
 ...
 ```
+
 Puedes descargar [este archivo Doxyfile](https://github.com/ucudal/PII_ProjectTemplate/blob/master/docs/Doxyfile) que ya tiene todas las modificaciones.
 
 4 - Ejecutamos Doxygen

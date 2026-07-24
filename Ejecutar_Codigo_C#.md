@@ -1,5 +1,5 @@
-## Ejecutar código C#
-
+<!-- markdownlint-disable MD020 -->
+# Ejecutar código C#
 
 0 - Navegar a la raiz del proyecto a ejecutar. Por ejemplo, al proyecto Program.
 

@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD033 -->
 # Consola
 
 ## Primero lo primero... ¿qué es la consola del sistema operativo?
@@ -21,7 +22,7 @@ Depende del sistema operativo.
 
 ![windows](https://img.shields.io/badge/Windows-0078D6?style=flat&logo=windows&logoColor=white)
 
-Hay varias formas. Una es presionar simultáneamente <kbd>![Windows]</kbd>+<kbd>R</kbd>,
+Hay varias formas. Una es presionar simultáneamente <kbd>Windows</kbd>+<kbd>R</kbd>,
 escribrir `cmd`, y presionar <kbd>Enter</kbd>.
 
 <img src="./assets/Run-Win.png" alt="Run en Windows" width="206"/>
@@ -56,16 +57,19 @@ utiliza el comando **Open in Terminal**:
 
 <img src="./assets/Open%20Terminal%20MacOS.gif" alt="Abrir Terminal en MacOS" width="383"/>
 
-También es posible iniciar la consola desde Rider, haciendo clic en el icono
-![](https://intellij-icons.jetbrains.design/icons/TerminalIcons/icons/expui/toolwindow/terminal_dark.svg)
-que aparece en la barra de herramientas vertical izquierda. Es lo más
-recomendable si estás trabajando en un proyecto en Rider y debes usar la
+También es posible iniciar la consola desde Visual Studio Code con el comando
+`Terminal | New Terminal` o presionando <kbd>Ctrl</kbd>+<kbd>`</kbd>[^1]. Es lo
+más recomendable si estás trabajando en un proyecto en Rider y debes usar la
 consola:
 
-<img src="./assets/Terminal-Rider.gif" alt="Terminal en Rider" width="365"/>
+[^1]: El método abreviado de teclado puede cambiar dependiendo del idioma o de
+    tu configuración; aparece en el menú junto al comando `Terminal | New
+    Terminal`.
 
-Rider abre la terminal en la carpeta donde está el proyecto que tienes abierto,
-lo cual suele ser sumamente práctico.
+<img src="./assets/Terminal-VSCode.gif" alt="Terminal en Rider" width="365"/>
+
+Visual Studio Code abre la terminal en la carpeta donde está el proyecto que
+tienes abierto, lo cual suele ser sumamente práctico.
 
 ## ¿Cómo ejecutar un comando?
 
@@ -209,5 +213,5 @@ Tengo un archivo de extensión **txt**, con nombre **Viejo** y quiero renombrarl
 |Borrar archivo|del, erase|rm|
 |Cambiar nombre de un archivo|rename|mv|
 |Mostrar contenido de un archivo|type|cat|
-|Mostrar atributos del archivo|attrib|ls -l
+|Mostrar atributos del archivo|attrib|ls -l|
 |Copiar archivos|copy|cp|

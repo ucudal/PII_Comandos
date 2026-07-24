@@ -1,5 +1,5 @@
-## Ejecutar tests C#
-
+<!-- markdownlint-disable MD020 -->
+# Ejecutar tests C#
 
 0 - Navegar a la raiz del proyecto de test. Asumimos que el proyecto tiene la estructura base del curso. Cambiar `Library.Test` por el nombre del proyecto de test.
 
