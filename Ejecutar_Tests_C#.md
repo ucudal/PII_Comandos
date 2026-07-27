@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD020 -->
 # Ejecutar tests C#
 
-0 - Navegar a la raiz del proyecto de test. Asumimos que el proyecto tiene la estructura base del curso. Cambiar `Library.Test` por el nombre del proyecto de test.
+0 - Navegar a la raiz del proyecto de test. Asumimos que el proyecto tiene la estructura base del curso. Cambiar `LibraryTests` por el nombre del proyecto de test.
 
 ```bash
 cd test/Library.Test

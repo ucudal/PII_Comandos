@@ -21,7 +21,7 @@ En C# vamos a trabajar con diferentes proyectos. Cada proyecto va en su propia c
 │  └─ Library/
 │     └─ …
 └─ test/
-   └─ Library.Tests/
+   └─ LibraryTests/
       └─ …
 ```
 
@@ -44,7 +44,7 @@ que use nuestro programa principal. En `Program` pondremos el proyecto –que
 típicamente es un proyecto de consola– y el código del programa principal que
 usa las demás clases.
 
-En la carpeta `test` hay una carpeta `Library.Test`. En esta carpeta estará el
+En la carpeta `test` hay una carpeta `LibraryTests`. En esta carpeta estará el
 proyecto de prueba y las clases de prueba de las que programemos en `Library`.
 Habrá una clase de prueba por cada clase en `Library`.
 
@@ -52,21 +52,28 @@ Habrá una clase de prueba por cada clase en `Library`.
 > muy sencillo, no es necesaria; en programas más complejos, habrá muchas
 > clases, y para que sea fácil encontrarlas, es mejor saber dónde buscarlas.
 
-A continuación te daremos paso a paso los comandos que debes ejecutar en la línea de comandos o la terminal para crear esta estructura de carpetas y los respectivos proyectos.
+A continuación te daremos paso a paso los comandos que debes ejecutar en la
+línea de comandos o la terminal para crear esta estructura de carpetas y los
+respectivos proyectos.
 
-0 – Creamos una carpeta para nuestro proyecto. Cambiar `proyecto` por el nombre que corresponda. Este comando tenemos que ejecutarlo en la carpeta donde guardamos todos nuestros proyectos; te mostramos más arriba cómo llegar a ella.
+0 – Creamos una carpeta para nuestro proyecto. Cambiar `proyecto` por el nombre
+que corresponda. Este comando tenemos que ejecutarlo en la carpeta donde
+guardamos todos nuestros proyectos; te mostramos más arriba cómo llegar a ella.
 
 ```bash
 mkdir proyecto
 ```
 
-1 – Nos movemos a la carpeta creada en el paso 0. Esto es para simplificar los comandos que siguen, porque no tendremos que decirles en qué carpeta se ejecutan, sino que asumirán la carpeta actual.
+1 – Nos movemos a la carpeta creada en el paso 0. Esto es para simplificar los
+comandos que siguen, porque no tendremos que decirles en qué carpeta se
+ejecutan, sino que asumirán la carpeta actual.
 
 ```bash
 cd proyecto
 ```
 
-2 - Crear una solución. La solución contendrá referencias a todos nuestros demás proyectos.
+2 - Crear una solución. La solución contendrá referencias a todos nuestros demás
+proyectos.
 
 ```bash
 dotnet new sln
@@ -84,25 +91,31 @@ mkdir docs
 mkdir test
 ```
 
-4 — Navegamos a la carpeta `src`. De nuevo, esto es para simplificar los comandos que siguen, que asumen que la carpeta en la que se ejecutan es la carpeta actual.
+4 — Navegamos a la carpeta `src`. De nuevo, esto es para simplificar los
+comandos que siguen, que asumen que la carpeta en la que se ejecutan es la
+carpeta actual.
 
 ```bash
 cd src
 ```
 
-5 — Creamos un proyecto nuevo de consola llamado `Program`. Este proyecto tendrá nuestro programa principal.
+5 — Creamos un proyecto nuevo de consola llamado `Program`. Este proyecto tendrá
+nuestro programa principal.
 
 ```bash
 dotnet new console -n Program --use-program-main
 ```
 
-6 — Creamos un proyecto nuevo de librería llamado `Library`. Este proyecto tendrá nuestras clases.
+6 — Creamos un proyecto nuevo de librería llamado `Library`. Este proyecto
+tendrá nuestras clases.
 
 ```bash
 dotnet new classlib -n Library
 ```
 
-7 - Navegamos al proyecto de consola `Program` y agregamos una referencia al proyecto de librería `Library`. Esto es para que el programa principal pueda usar las clases que creemos en las librerías.
+7 - Navegamos al proyecto de consola `Program` y agregamos una referencia al
+proyecto de librería `Library`. Esto es para que el programa principal pueda
+usar las clases que creemos en las librerías.
 
 ```bash
 cd Program
@@ -116,18 +129,21 @@ cd ..
 cd ..
 ```
 
-9 - Creamos un proyecto nuevo de test (NUnit) llamado `Library.Tests` dentro del directorio test.
+9 - Creamos un proyecto nuevo de test (NUnit) llamado `LibraryTests` dentro del
+directorio test.
 
 ```bash
 cd test
-dotnet new nunit -n Library.Tests
+dotnet new nunit -n LibraryTests
 ```
 
-10 — Navegamos al proyecto de test `Library.Tests` y agregamos una referencia al proyecto de biblioteca `Library`. Esto es para que nuestros tests puedan acceder a las clases que creemos en las librerías.
+10 — Navegamos al proyecto de test `LibraryTests` y agregamos una referencia al
+proyecto de biblioteca `Library`. Esto es para que nuestros tests puedan acceder
+a las clases que creemos en las librerías.
 
 ```bash
-cd Library.Tests
-dotnet add Library.Tests.csproj reference ../../src/Library/Library.csproj
+cd LibraryTests
+dotnet add LibraryTests.csproj reference ../../src/Library/Library.csproj
 ```
 
 11 - Volver al directorio raíz del proyecto
@@ -137,12 +153,13 @@ cd ..
 cd ..
 ```
 
-12 - Agregar los tres proyectos creados a la solución. Esto es para poder compilar todos nuestros proyectos de una sola vez.
+12 - Agregar los tres proyectos creados a la solución. Esto es para poder
+compilar todos nuestros proyectos de una sola vez.
 
 ```bash
 dotnet sln add src/Library/Library.csproj
 dotnet sln add src/Program/Program.csproj
-dotnet sln add test/Library.Tests/Library.Tests.csproj
+dotnet sln add test/LibraryTests/LibraryTests.csproj
 ```
 
 13 - Generar archivo `.gitignore`
@@ -161,11 +178,14 @@ Al final de estos pasos, deberías tener en el directorio de tu proyecto la sigu
 │  └─ Library/
 │     └─ Library.csproj
 └─ test/
-   └─ Library.Tests/
-      └─ Library.Tests.csproj
+   └─ LibraryTests/
+      └─ LibraryTests.csproj
 ```
 
-También podríamos crear un .bat que contenga todos los comandos mencionados anteriormente y agregarlo a la variable path para que lo podamos ejecutar dentro de cualquier carpeta de proyecto previamente creada. Hasta puedo hacer que me abra Visual Studio Code.
+También podríamos crear un .bat que contenga todos los comandos mencionados
+anteriormente y agregarlo a la variable path para que lo podamos ejecutar dentro
+de cualquier carpeta de proyecto previamente creada. Hasta puedo hacer que me
+abra Visual Studio Code.
 
 ```bash
 dotnet new sln
@@ -180,14 +200,14 @@ dotnet add Program.csproj reference ../Library/Library.csproj
 cd ..
 cd ..
 cd test
-dotnet new nunit -n Library.Tests
-cd Library.Tests
-dotnet add Library.Tests.csproj reference ../../src/Library/Library.csproj
+dotnet new nunit -n LibraryTests
+cd LibraryTests
+dotnet add LibraryTests.csproj reference ../../src/Library/Library.csproj
 cd ..
 cd ..
 dotnet sln add src/Library/Library.csproj
 dotnet sln add src/Program/Program.csproj
-dotnet sln add test/Library.Tests/Library.Tests.csproj
+dotnet sln add test/LibraryTests/LibraryTests.csproj
 dotnet new gitignore
 code .
 ```
